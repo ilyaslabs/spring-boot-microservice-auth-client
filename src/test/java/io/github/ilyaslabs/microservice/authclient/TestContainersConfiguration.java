@@ -3,7 +3,7 @@ package io.github.ilyaslabs.microservice.authclient;
 import org.mockserver.client.MockServerClient;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.testcontainers.containers.MockServerContainer;
+import org.testcontainers.mockserver.MockServerContainer;
 import org.testcontainers.utility.DockerImageName;
 
 /**
