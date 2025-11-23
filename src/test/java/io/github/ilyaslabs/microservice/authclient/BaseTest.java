@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.context.ImportTestcontainers;
 import org.springframework.context.annotation.Import;
-import org.testcontainers.containers.MockServerContainer;
+import org.testcontainers.mockserver.MockServerContainer;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -37,7 +37,7 @@ import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
  * - toJsonString: Converts a Java object into its JSON string representation using the ObjectMapper.
  *   It throws a RuntimeException in case of serialization errors.
  */
-@SpringBootTest(classes = AutoConfig.class)
+@SpringBootTest(classes = { AutoConfig.class })
 @ImportTestcontainers(TestContainersConfiguration.class)
 @Import(FixedClockConfiguration.class)
 abstract class BaseTest {
